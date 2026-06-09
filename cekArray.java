@@ -1,0 +1,41 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package Praktikum08062026;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+/**
+ Putri Kholiwiyah (2501081013) Teknik Komputer 1 A
+ */
+public class cekArray {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[] angka ={10,20,30,40,50};
+        try{
+        System.out.print("Mau bagi angka index ke berapa = ");
+        int index = input.nextInt();
+        System.out.println("Angka pada index "+index+" adalah "+angka[index]);
+        System.out.print("Mau dibagi angka berapa = ");
+        int pembagi = input.nextInt();
+        
+        int hasil = angka [index]/pembagi;
+        System.err.println("Hasil pembagian "+hasil);  
+    }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Index array tidak ada, masukkan 0-4");
+    }catch(InputMismatchException e){
+            System.out.println("Pastikan input berupa angka");
+    }catch(ArithmeticException e){
+            System.out.println("Tidak boleh pembagian dengan 0");
+    }finally {
+        System.out.println("Proses selesai, isi array adalah = "+angka);
+        System.out.println("Cara 1 ");
+        for(int i=0;i<angka.leght;i++)
+            System.out.print(" "+angka[i]);
+            System.out.println("cara 2");\
+            System.out.println("Proses selesai, isi array adalah = "+java.util.Arrays.toString(angka));
+    }//Tampilkan Array
+  }
+}
